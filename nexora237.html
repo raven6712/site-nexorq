@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nexora237 | Communauté et équipe numérique au Cameroun</title>
+<meta name="description" content="Nexora237 : jeunes passionnés du numérique au Cameroun. Développement web et mobile, UI/UX, marketing digital, IA et données. Découvrez nos projets dont Agrilucid.">
+<meta property="og:title" content="Nexora237">
+<meta property="og:description" content="Communauté et équipe de jeunes passionnés du numérique au Cameroun.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Palette de base : à remplacer par les couleurs exactes du logo Nexora237 */
+  --ink:#0A1630; --ink2:#12224A; --brand:#2F6BFF; --brand-d:#1D4FD6; --sky:#8FB3FF;
+  --paper:#FFFFFF; --mist:#EEF3FB; --text:#16213D; --muted:#55627F; --line:#D9E2F2;
+  --bg:var(--paper); --surface:#fff; --fg:var(--text);
+  --f-head:'Poppins',system-ui,sans-serif; --f-body:'Inter',system-ui,sans-serif;
+}
+:root:not([data-theme="light"]){}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#070E20;--surface:#0E1A38;--fg:#E8EEFC;--muted:#9AA8C7;--line:#1F2F5A;--mist:#0B1530}
+}
+:root[data-theme="dark"]{--bg:#070E20;--surface:#0E1A38;--fg:#E8EEFC;--muted:#9AA8C7;--line:#1F2F5A;--mist:#0B1530}
+*{box-sizing:border-box;margin:0}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));height:100%}
+body{background:var(--bg);color:var(--fg);font:400 1rem/1.65 var(--f-body);overflow-x:hidden;-webkit-text-size-adjust:100%}
+img,svg{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding:4.5rem 0}
+h1,h2,h3{font-family:var(--f-head);line-height:1.15;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:.8rem}
+.lead{color:var(--muted);max-width:60ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.75rem 1.4rem;border-radius:999px;font:600 .98rem var(--f-head);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-p{background:var(--brand);color:#fff}.btn-p:hover{background:var(--brand-d)}
+.btn-g{border-color:rgba(255,255,255,.45);color:#fff}.btn-g:hover{background:rgba(255,255,255,.1)}
+.btn-o{border-color:var(--brand);color:var(--brand)}
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);background:rgba(10,22,48,.88);backdrop-filter:blur(10px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:#fff;font:700 1.2rem var(--f-head)}
+.logo img{height:34px;width:auto;display:block} /* logo officiel : voir LOGO_SRC */
+
+.logo b{color:var(--sky);font-weight:700}
+.menu{display:none;list-style:none;padding:0}
+.menu a{color:#DCE6FF;text-decoration:none;font-weight:500;padding:.5rem .8rem;border-radius:8px}
+.menu a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.burger{background:none;border:0;color:#fff;width:48px;height:48px;cursor:pointer}
+.burger svg{width:26px;height:26px}
+.menu.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--ink);padding:.75rem 1.25rem 1.25rem}
+.menu.open a{display:block;padding:.9rem .5rem;font-size:1.05rem}
+@media(min-width:860px){.burger{display:none}.menu{display:flex;gap:.2rem}}
+/* hero */
+.hero{position:relative;background:radial-gradient(120% 90% at 85% 0%,#1B3A8C 0%,var(--ink) 55%);color:#fff;padding:9rem 0 5rem;overflow:hidden}
+.hero .big{position:absolute;right:-4%;bottom:-6%;font:800 clamp(9rem,38vw,26rem)/1 var(--f-head);color:transparent;-webkit-text-stroke:2px rgba(143,179,255,.22);letter-spacing:-.05em;pointer-events:none;animation:drift 14s ease-in-out infinite alternate;user-select:none}
+.orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.45;pointer-events:none}
+.o1{width:280px;height:280px;background:var(--brand);top:8%;left:-80px;animation:drift 11s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(-18px,-24px,0)}}
+.hero h1{font-size:clamp(2.3rem,8vw,4.6rem);max-width:15ch;font-weight:700;animation:rise .9s both}
+.hero p{margin:1.4rem 0 2rem;max-width:52ch;color:#C9D6F5;font-size:1.1rem;animation:rise .9s .15s both}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;animation:rise .9s .3s both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero > .wrap{position:relative}
+/* quick scan access */
+.quick{background:var(--ink2);padding:1.1rem 0}
+.quick .wrap{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:space-between}
+.quick strong{color:#fff;font:600 .95rem var(--f-head)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chips a{color:#fff;text-decoration:none;font:500 .9rem var(--f-body);padding:.5rem .95rem;min-height:40px;display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.25);border-radius:999px}
+.chips a:hover{background:rgba(255,255,255,.12)}
+/* about */
+.about{display:grid;gap:2rem}
+.pillars{display:grid;gap:1rem}
+.pillar{border-left:4px solid var(--brand);padding:.2rem 0 .2rem 1rem}
+.pillar h3{font-size:1.1rem;margin-bottom:.2rem}
+.pillar p{color:var(--muted)}
+@media(min-width:860px){.about{grid-template-columns:1.1fr 1fr;align-items:start}}
+/* services */
+.band{background:var(--mist)}
+.grid{display:grid;gap:1rem;margin-top:2rem}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.grid.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.5rem;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:var(--brand)}
+.ic{width:46px;height:46px;border-radius:12px;background:var(--ink);color:var(--sky);display:grid;place-items:center;margin-bottom:1rem}
+.ic svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.15rem;margin-bottom:.4rem}
+.card p{color:var(--muted);font-size:.97rem}
+/* projects */
+.feat{display:grid;background:var(--ink);color:#fff;border-radius:24px;overflow:hidden;margin-top:2rem}
+.feat .vis{min-height:220px;background:linear-gradient(135deg,#1D4FD6,#0A1630);display:grid;place-items:center;font:700 clamp(1.6rem,6vw,2.4rem) var(--f-head);color:rgba(255,255,255,.9)}
+.feat .vis img{width:100%;height:100%;object-fit:cover}
+.feat .body{padding:1.8rem}
+.feat h3{font-size:1.8rem;margin:.4rem 0 .6rem}
+.feat p{color:#C9D6F5;margin-bottom:1.2rem}
+.tag{display:inline-block;font:600 .8rem var(--f-body);padding:.25rem .7rem;border-radius:999px;background:rgba(143,179,255,.18);color:var(--sky)}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:.3rem 0 1rem}
+@media(min-width:860px){.feat{grid-template-columns:1fr 1fr}.feat .body{padding:2.6rem}}
+.empty{border:2px dashed var(--line);border-radius:18px;padding:1.5rem;color:var(--muted);text-align:center}
+/* team */
+.member{text-align:center}
+.avatar{width:96px;height:96px;border-radius:50%;margin:0 auto 1rem;background:var(--mist);border:1px solid var(--line);overflow:hidden;display:grid;place-items:center;color:var(--muted);font:600 1.6rem var(--f-head)}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.role{color:var(--brand);font-weight:600;font-size:.92rem}
+.mlinks{display:flex;gap:.5rem;justify-content:center;margin-top:.8rem}
+.mlinks a{font-size:.9rem;padding:.3rem .7rem;border:1px solid var(--line);border-radius:999px;text-decoration:none}
+/* contact */
+.contact{display:grid;gap:2rem}
+@media(min-width:860px){.contact{grid-template-columns:1fr 1.2fr}}
+.socials{display:grid;gap:.7rem;margin-top:1.4rem}
+.soc{display:flex;align-items:center;gap:.9rem;padding:.9rem 1.1rem;min-height:56px;background:var(--surface);border:1px solid var(--line);border-radius:14px;text-decoration:none;font-weight:600;font-family:var(--f-head);transition:border-color .2s,transform .2s}
+.soc:hover{border-color:var(--brand);transform:translateX(4px)}
+.soc svg{width:26px;height:26px;fill:currentColor;flex:none}
+.soc small{display:block;font:400 .85rem var(--f-body);color:var(--muted)}
+form{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:1.5rem;display:grid;gap:1rem}
+label{font:600 .92rem var(--f-head);display:grid;gap:.35rem}
+input,textarea{font:inherit;color:inherit;background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:.8rem 1rem;min-height:48px;width:100%}
+textarea{min-height:130px;resize:vertical}
+input:focus,textarea:focus{border-color:var(--brand);outline:none;box-shadow:0 0 0 3px rgba(47,107,255,.25)}
+.err{color:#D93B3B;font:400 .85rem var(--f-body);min-height:1em}
+#status{padding:.8rem 1rem;border-radius:12px;display:none;font-size:.95rem}
+#status.show{display:block;background:var(--mist);border:1px solid var(--line)}
+button[disabled]{opacity:.65;cursor:wait}
+/* footer */
+footer{background:var(--ink);color:#C9D6F5;padding:3rem 0 2rem}
+.fgrid{display:grid;gap:1.8rem}
+@media(min-width:760px){.fgrid{grid-template-columns:1.4fr 1fr 1fr}}
+footer h4{color:#fff;font:600 1rem var(--f-head);margin-bottom:.6rem}
+footer ul{list-style:none;padding:0;display:grid;gap:.3rem}
+footer a{text-decoration:none}footer a:hover{color:#fff;text-decoration:underline}
+.copy{border-top:1px solid rgba(255,255,255,.12);margin-top:2rem;padding-top:1.2rem;font-size:.9rem}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="#accueil" class="logo" id="logo" aria-label="Nexora237, accueil">
+      <img src="./images/PLO.png" alt="Logo Nexora237"><span>Nexora<b><p1 color="green">2</P1><P2 color="red">3</P2><P3 color="yellow">7</P3></b></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="menu" id="menu">
+      <li><a href="#apropos">À propos</a></li><li><a href="#services">Services</a></li>
+      <li><a href="#projets">Projets</a></li><li><a href="#equipe">Équipe</a></li><li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+  <div class="orb o1" aria-hidden="true"></div>
+  <div class="big" aria-hidden="true">237</div>
+  <div class="wrap">
+    <h1>Le numérique de demain s'écrit ici, au Cameroun.</h1>
+    <p>Nexora237 réunit des jeunes passionnés qui imaginent des solutions numériques utiles et partagent ce qu'ils apprennent.</p>
+    <div class="cta">
+      <a class="btn btn-p" href="#projets">Découvrir nos projets</a>
+      <a class="btn btn-g" href="#contact">Nous contacter</a>
+    </div>
+  </div>
+</section>
+
+<div class="quick" aria-label="Accès rapide">
+  <div class="wrap">
+    <strong>Accès rapide</strong>
+    <nav class="chips"><a href="#projets">Projets</a><a href="#contact">Contact</a><a href="#reseaux">Réseaux sociaux</a></nav>
+  </div>
+</div>
+
+<section id="apropos">
+  <div class="wrap about">
+    <div>
+      <h2>Une équipe qui construit et qui partage</h2>
+      <p class="lead">Nous sommes des jeunes passionnés du numérique. Nous concevons des solutions concrètes et nous transmettons nos connaissances à la communauté.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar"><h3>Concevoir</h3><p>Des solutions numériques pensées pour de vrais usages.</p></div>
+      <div class="pillar"><h3>Partager</h3><p>Une communauté où chacun apprend et progresse.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="services">
+  <div class="wrap">
+    <h2>Nos services</h2>
+    <p class="lead">Ce que l'équipe propose ou prépare.</p>
+    <div class="grid g3" id="services-grid"></div>
+  </div>
+</section>
+
+<section id="projets">
+  <div class="wrap">
+    <h2>Nos projets</h2>
+    <p class="lead">Une sélection de ce que nous construisons.</p>
+    <div id="featured"></div>
+    <div class="grid g3" id="projects-grid"></div>
+  </div>
+</section>
+
+<section class="band" id="equipe">
+  <div class="wrap">
+    <h2>Notre équipe</h2>
+    <div class="grid g3" id="team-grid"></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div id="reseaux">
+      <h2>Parlons de votre idée</h2>
+      <p class="lead">Écrivez-nous ou suivez nos actualités sur nos réseaux.</p>
+      <div class="socials" id="socials"></div>
+    </div>
+    <form id="form" novalidate>
+      <label>Nom<input name="nom" autocomplete="name" required><span class="err" data-for="nom"></span></label>
+      <label>Adresse e-mail<input name="email" type="email" autocomplete="email" required><span class="err" data-for="email"></span></label>
+      <label>Sujet<input name="sujet" required><span class="err" data-for="sujet"></span></label>
+      <label>Message<textarea name="message" required></textarea><span class="err" data-for="message"></span></label>
+      <button class="btn btn-p" id="send" type="submit">Envoyer le message</button>
+      <div id="status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><a href="#accueil" class="logo" style="margin-bottom:.7rem"><span>Nexora<b>237</b></span></a>
+        <p>Communauté et équipe de jeunes passionnés du numérique au Cameroun.</p></div>
+      <div><h4>Navigation</h4><ul><li><a href="#apropos">À propos</a></li><li><a href="#services">Services</a></li><li><a href="#projets">Projets</a></li><li><a href="#equipe">Équipe</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Réseaux</h4><ul id="fsoc"></ul></div>
+    </div>
+    <p class="copy">© <span id="year"></span> Nexora237. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script>
+/* ===== CONFIGURATION : seul bloc à modifier pour compléter le site ===== */
+const CONFIG = {
+  LOGO_SRC: "",            // chemin du logo officiel, ex. "assets/logo.png"
+  WHATSAPP: "",            // numéro officiel au format international sans +, ex. "237XXXXXXXXX"
+  FORM_ENDPOINT: ""        // URL d'un service d'envoi (Formspree, Getform, etc.)
+};
+const SERVICES = [
+  ["Développement web","M16 18l6-6-6-6M8 6l-6 6 6 6","Sites et applications web rapides et accessibles."],
+  ["Développement mobile","M7 2h10a1 1 0 011 1v18a1 1 0 01-1 1H7a1 1 0 01-1-1V3a1 1 0 011-1zM11 18h2","Applications pensées pour le téléphone."],
+  ["UI/UX et design graphique","M12 19l7-7 3 3-7 7zM18 13L16.5 5.5 2 2l3.5 14.5L13 18zM2 2l7.6 7.6","Interfaces claires et identités visuelles."],
+  ["Marketing digital et growth","M3 17l6-6 4 4 8-8M15 7h6v6","Visibilité et croissance de vos projets."],
+  ["Intelligence artificielle","M12 2a4 4 0 014 4v1a4 4 0 01-8 0V6a4 4 0 014-4zM5 21v-2a4 4 0 014-4h6a4 4 0 014 4v2","Des usages concrets de l'IA."],
+  ["Données et solutions numériques","M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3zM4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6","Exploiter les données pour décider mieux."]
+];
+const PROJECTS = [
+  { featured:true, name:"Agrilucid", tags:["Agriculture","Innovation","Marketplace"],
+    desc:"Projet orienté agriculture et innovation technologique, intégrant une marketplace.",
+    image:"", link:"#contact" }
+  // Ajouter d'autres projets ici : { name, desc, tags:[...], image:"", link:"" }
+];
+const TEAM = [
+  // Ajouter les membres ici : { name:"", role:"", photo:"", links:[{label:"LinkedIn", url:""}] }
+];
+const SOCIALS = [
+  {name:"LinkedIn", url:"https://www.linkedin.com/company/nexora273/", d:"M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"},
+  {name:"TikTok", url:"https://www.tiktok.com/@nexora2376", d:"M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"},
+  {name:"Facebook", url:"https://www.facebook.com/share/1V5XSu67Gq/?mibextid=wwXIf", d:"M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"}
+];
+if (CONFIG.WHATSAPP) SOCIALS.push({name:"WhatsApp", url:"https://wa.me/"+CONFIG.WHATSAPP, d:"M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.4.1.1.1.6-.1 1.2z"});
+
+/* ===== Rendu ===== */
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+if (CONFIG.LOGO_SRC) { $('#logoImg').src = CONFIG.LOGO_SRC; $('#logo').classList.add('has-img'); }
+
+$('#services-grid').innerHTML = SERVICES.map(([t,d,p]) =>
+  `<article class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${d}"/></svg></div><h3>${esc(t)}</h3><p>${esc(p)}</p></article>`).join('');
+
+const tags = a => `<div class="tags">${(a||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div>`;
+const vis = p => p.image ? `<img src="${esc(p.image)}" alt="Visuel du projet ${esc(p.name)}" loading="lazy">` : esc(p.name);
+const f = PROJECTS.find(p => p.featured);
+if (f) $('#featured').innerHTML = `<article class="feat"><div class="vis">${vis(f)}</div><div class="body"><span class="tag">Projet à la une</span><h3>${esc(f.name)}</h3>${tags(f.tags)}<p>${esc(f.desc)}</p><a class="btn btn-p" href="${esc(f.link||'#contact')}">En savoir plus</a></div></article>`;
+const others = PROJECTS.filter(p => !p.featured);
+$('#projects-grid').innerHTML = others.length ? others.map(p =>
+  `<article class="card"><div class="vis" style="border-radius:12px;overflow:hidden;margin-bottom:1rem">${p.image?vis(p):''}</div><h3>${esc(p.name)}</h3>${tags(p.tags)}<p>${esc(p.desc)}</p><p style="margin-top:1rem"><a class="btn btn-o" href="${esc(p.link||'#contact')}">En savoir plus</a></p></article>`).join('')
+  : `<div class="empty" style="grid-column:1/-1">D'autres projets arrivent bientôt.</div>`;
+
+$('#team-grid').innerHTML = TEAM.length ? TEAM.map(m =>
+  `<article class="card member"><div class="avatar">${m.photo?`<img src="${esc(m.photo)}" alt="Photo de ${esc(m.name)}" loading="lazy">`:esc(m.name.slice(0,1))}</div><h3>${esc(m.name)}</h3><p class="role">${esc(m.role)}</p><div class="mlinks">${(m.links||[]).map(l=>`<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.label)}</a>`).join('')}</div></article>`).join('')
+  : `<div class="empty" style="grid-column:1/-1">Les profils de l'équipe seront ajoutés ici : photo, nom, rôle et liens professionnels.</div>`;
+
+$('#socials').innerHTML = SOCIALS.map(s =>
+  `<a class="soc" href="${s.url}" target="_blank" rel="noopener noreferrer" aria-label="Nexora237 sur ${s.name} (nouvel onglet)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${s.d}"/></svg><span>${s.name}<small>Ouvrir la page Nexora237</small></span></a>`).join('');
+$('#fsoc').innerHTML = SOCIALS.map(s => `<li><a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.name}</a></li>`).join('');
+$('#year').textContent = new Date().getFullYear();
+
+/* Menu mobile */
+const burger = $('#burger'), menu = $('#menu');
+burger.addEventListener('click', () => { const o = menu.classList.toggle('open'); burger.setAttribute('aria-expanded', o); });
+menu.addEventListener('click', e => { if (e.target.tagName === 'A') { menu.classList.remove('open'); burger.setAttribute('aria-expanded', false); } });
+
+/* Formulaire */
+const form = $('#form'), status = $('#status'), send = $('#send');
+const msgs = {nom:'Indiquez votre nom.', email:"Saisissez une adresse e-mail valide.", sujet:'Indiquez le sujet.', message:'Écrivez votre message.'};
+function show(t){ status.textContent = t; status.className = 'show'; }
+form.addEventListener('submit', async e => {
+  e.preventDefault(); let ok = true;
+  for (const el of form.elements) {
+    if (!el.name) continue;
+    const bad = !el.checkValidity() || !el.value.trim();
+    form.querySelector(`[data-for="${el.name}"]`).textContent = bad ? msgs[el.name] : '';
+    el.setAttribute('aria-invalid', bad); if (bad) ok = false;
+  }
+  if (!ok) return show('Corrigez les champs signalés.');
+  if (!CONFIG.FORM_ENDPOINT) return show("L'envoi par formulaire n'est pas encore activé. Contactez-nous via nos réseaux sociaux.");
+  send.disabled = true; send.textContent = 'Envoi en cours…';
+  try {
+    const r = await fetch(CONFIG.FORM_ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json',Accept:'application/json'}, body:JSON.stringify(Object.fromEntries(new FormData(form)))});
+    if (!r.ok) throw 0; form.reset(); show('Message envoyé. Merci, nous vous répondons rapidement.');
+  } catch { show("L'envoi a échoué. Réessayez ou contactez-nous via nos réseaux."); }
+  send.disabled = false; send.textContent = 'Envoyer le message';
+});
+</script>
+</body>
+</html>
